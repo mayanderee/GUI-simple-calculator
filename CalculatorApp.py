@@ -62,7 +62,7 @@ class CalculatorApp:
             elif operation == "Multiplication":
                 result = num1 * num2
             elif operation == "Division":
-                result = num1 / num2 if num2 != 0 else "Error: Division by Zero"
+                result = num1 / num2 if num2 != 0 else "Error"
             elif operation == "Subtraction":
                 result = num1 - num2
             else:
@@ -70,7 +70,7 @@ class CalculatorApp:
 
             self.result_label.config(text=f"{result}")
         except ValueError:
-            self.result_label.config(text="Error: Invalid input.")
+            self.result_label.config(text="Error")
 
         # Clear inputs for the next calculation
         self.num1_entry.delete(0, 'end')
